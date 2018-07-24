@@ -10,7 +10,7 @@ class Hmap < Formula
 
   def install
     system "swift",
-        "build",
+        "build", "--disable-sandbox",
         "-c", "release",
         "-Xswiftc", "-static-stdlib"
     bin.install ".build/release/hmap"
